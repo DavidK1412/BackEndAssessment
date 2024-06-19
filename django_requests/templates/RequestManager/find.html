@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Finder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1>Finder</h1>
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">OMBdApi Searcher</label>
+            <input type="text" class="form-control" id="parameter" name="parameter">
+        </div>
+        <button type="submit" id="btn-submit" class="btn btn-primary">Find</button>
+    </form>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+    const btn = document.getElementById('btn-submit');
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const parameter = document.getElementById('parameter').value;
+        window.location.href = `/search/${parameter}/`;
+    });
+</script>
+</body>
+</html>
